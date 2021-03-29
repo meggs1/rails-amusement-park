@@ -1,0 +1,17 @@
+<%= form_for @user do |f| %>
+    <label>Name:</label>
+    <%=f.text_field :name %>
+    <label>Password:</label>
+    <%=f.password_field :password %>
+    <label>Height:</label>
+    <%=f.text_field :height %>
+    <label>Happiness:</label>
+    <%=f.text_field :happiness %>
+    <label>Nausea:</label>
+    <%=f.text_field :nausea %>
+    <label>Tickets:</label>
+    <%=f.text_field :tickets %>
+    <p>Admin: <%= f.check_box :admin, options = {:class => "user_admin"} %></p>
+
+    <%= f.submit "Create User" %>
+<%end%>
